@@ -1,9 +1,11 @@
 function highlight(table) {
-  for (let index = 0; index < table.querySelector('tbody').rows.length; index++) {
-    const row = table.querySelector('tbody').rows[index];
-    const age = table.querySelector('tbody').rows[index].cells[1];
-    const gender = table.querySelector('tbody').rows[index].cells[2];
-    const status = table.querySelector('tbody').rows[index].cells[3];
+  const tBody = table.querySelector('tbody');
+
+  for (let index = 0; index < tBody.rows.length; index++) {
+    const row = tBody.rows[index];
+    const age = row.cells[1];
+    const gender = row.cells[2];
+    const status = row.cells[3];
 
     // Status
     if (status.dataset.available == 'true') {
